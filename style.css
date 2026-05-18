@@ -259,7 +259,7 @@ table {
   width: 140.56vw;
   height: 64.5vw;
   mix-blend-mode: multiply;
-  opacity: 0.08; /* Grit paper texture opacity */
+  opacity: 0.35; /* Grit paper texture opacity increased for rich retro effect */
   z-index: 10; /* Apply texture on top of all illustration layers */
 }
 
