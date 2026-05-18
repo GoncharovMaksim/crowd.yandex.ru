@@ -443,8 +443,9 @@ table {
 .lecture-block {
   display: grid;
   grid-template-columns: 60% 40%;
+  grid-template-rows: auto auto;
   align-items: center;
-  gap: 2.9vw; /* 40px / 13.66 */
+  gap: 1.5vw 2.9vw; /* 20px vertical, 40px horizontal / 13.66 */
 }
 
 .lecture-block__title {
@@ -456,7 +457,19 @@ table {
   text-transform: uppercase;
 }
 
+.lecture-block__text-1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.lecture-block__text-2 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
 .lecture-block__visual {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   display: flex;
   justify-content: flex-end;
 }
@@ -739,9 +752,11 @@ table {
   height: 1.46vw;
 }
 
-.carousel-btn:hover:not(:disabled) {
-  background-color: var(--color-accent-gold);
-  color: var(--color-text-dark);
+@media (hover: hover) {
+  .carousel-btn:hover:not(:disabled) {
+    background-color: var(--color-accent-gold);
+    color: var(--color-text-dark);
+  }
 }
 
 .carousel-btn:disabled {
@@ -1006,16 +1021,17 @@ table {
   
   .hero__bg-mobile-only {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 240vw; /* 900px / 3.75 */
+    height: 216.5vw; /* 812px / 3.75 */
+    position: absolute;
+    left: -107.5vw; /* -403px / 3.75 */
+    top: 0;
   }
   
   .hero__bg-img {
     width: 100%;
-    max-width: none;
     height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
+    object-fit: fill;
     opacity: 1;
   }
   
@@ -1081,6 +1097,25 @@ table {
     border-bottom: 2px solid var(--color-border); /* Thicker dividing lines on mobile! */
   }
   
+  .session-table tr:nth-child(4) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 3vw;
+  }
+  
+  .session-table tr:nth-child(4) td {
+    display: inline;
+    width: auto;
+    padding: 3.2vw 0;
+  }
+  
+  .session-table tr:nth-child(5) td.session-table__val {
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+  }
+  
   .session-table__key {
     width: 100%;
     padding-right: 0;
@@ -1133,6 +1168,13 @@ table {
   .stages-carousel-viewport {
     width: 100%;
     border-radius: var(--border-radius-sm);
+    overflow: hidden; /* Hide cards outside the viewport */
+  }
+
+  .stages-carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
   }
   
   .stages-slide {
