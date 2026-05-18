@@ -617,10 +617,7 @@ table {
   background-blend-mode: multiply;
 }
 
-.stage-card:hover {
-  transform: translateY(-0.29vw);
-  box-shadow: 0 0.73vw 1.8vw rgba(49, 49, 49, 0.08);
-}
+
 
 .stage-card__num {
   font-family: var(--font-body);
@@ -691,9 +688,7 @@ table {
   transition: var(--transition-smooth);
 }
 
-.stage-card:hover .stage-card__bg-illustration {
-  transform: rotate(-1deg) scale(1.02);
-}
+
 
 /* Mobile Stage Carousel - Hidden on Desktop */
 .stages-carousel-wrapper {
