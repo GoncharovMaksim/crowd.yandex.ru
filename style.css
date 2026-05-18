@@ -1,9 +1,10 @@
 /* ----------------------------------------------------
-   VASUKI CHESS CLUB - CSS STYLES
-   Designed with premium aesthetics and responsive logic.
+   VASUKI CHESS CLUB - FLUID SCALING STYLES (100% VW)
+   Fully responsive layout styled entirely in relative vw units
+   to achieve seamless, proportional scaling on any screen size.
    ---------------------------------------------------- */
 
-/* --- CSS Variables / Design System --- */
+/* --- CSS Variables / Fluid Design System --- */
 :root {
   /* Colors */
   --color-bg-cream: #E9DED4;
@@ -23,11 +24,11 @@
   --font-body: 'Golos Text', sans-serif;
   --font-accent: 'Montserrat', sans-serif;
 
-  /* Spacing & Layout */
-  --max-width-container: 1222px;
+  /* Relative Spacing & Layout Scaling (Base 1366px viewport) */
+  --max-width-container: 89.45vw; /* 1222px / 13.66 */
   --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --border-radius-sm: 6px;
-  --border-radius-lg: 12px;
+  --border-radius-sm: 0.44vw; /* 6px / 13.66 */
+  --border-radius-lg: 0.88vw; /* 12px / 13.66 */
 }
 
 /* --- Global Resets & Base Styles --- */
@@ -38,7 +39,8 @@
 }
 
 html {
-  font-size: 16px;
+  /* Fluid base font size: scales dynamically with screen width */
+  font-size: 1.17vw; /* ~16px at 1366px */
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -83,7 +85,7 @@ table {
 .container {
   max-width: var(--max-width-container);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.46vw; /* 20px / 13.66 */
   position: relative;
 }
 
@@ -92,13 +94,13 @@ table {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 28px;
+  padding: 1.3vw 2vw; /* 18px 28px / 13.66 */
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 1.17vw; /* 16px */
   font-weight: 500;
   line-height: 1.3;
-  border-radius: 66px;
-  border: 2px solid transparent;
+  border-radius: 5vw; /* Infinite border-radius relative to screen */
+  border: 0.15vw solid transparent;
   cursor: pointer;
   transition: var(--transition-smooth);
   text-align: center;
@@ -129,9 +131,9 @@ table {
   border-color: #3057A2;
   color: #3057A2;
   background-color: transparent;
-  font-size: 0.875rem;
+  font-size: 1vw; /* 14px / 13.66 */
   font-weight: 500;
-  padding: 8px 16px;
+  padding: 0.6vw 1.2vw;
 }
 
 .btn--outline-dark:hover {
@@ -140,8 +142,8 @@ table {
 }
 
 .btn--sm {
-  padding: 10px 20px;
-  border-radius: 60px;
+  padding: 0.73vw 1.46vw;
+  border-radius: 5vw;
 }
 
 /* --- HEADER --- */
@@ -151,7 +153,7 @@ table {
   left: 0;
   width: 100%;
   z-index: 10;
-  padding: 26px 0;
+  padding: 1.9vw 0; /* 26px / 13.66 */
 }
 
 .header__container {
@@ -166,7 +168,7 @@ table {
 }
 
 .logo__img {
-  height: 36px;
+  height: 2.6vw; /* 36px / 13.66 */
   transition: var(--transition-smooth);
 }
 
@@ -177,9 +179,9 @@ table {
 /* --- HERO SECTION --- */
 .hero {
   background-color: var(--color-bg-cream);
-  min-height: 700px;
-  padding-top: 130px;
-  padding-bottom: 80px;
+  min-height: 51vw; /* 700px / 13.66 */
+  padding-top: 9.5vw; /* 130px / 13.66 */
+  padding-bottom: 5.8vw; /* 80px / 13.66 */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -190,7 +192,7 @@ table {
   position: absolute;
   top: 0;
   right: 0;
-  width: 60%;
+  width: 53vw;
   height: 100%;
   pointer-events: none;
   z-index: 1;
@@ -213,17 +215,17 @@ table {
 }
 
 .hero__content {
-  max-width: 580px;
+  max-width: 42.5vw; /* 580px / 13.66 */
 }
 
 .hero__title {
   font-family: var(--font-headings);
-  font-size: 3.75rem; /* 60px */
+  font-size: 4.4vw; /* 60px / 13.66 */
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
   color: var(--color-text-dark);
-  margin-bottom: 24px;
+  margin-bottom: 1.75vw;
   display: flex;
   flex-direction: column;
 }
@@ -246,17 +248,17 @@ table {
 
 .hero__subtitle {
   font-family: var(--font-body);
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.3vw; /* 18px / 13.66 */
   font-weight: 400;
   line-height: 1.35;
   color: var(--color-text-dark);
-  margin-bottom: 40px;
-  max-width: 540px;
+  margin-bottom: 2.9vw;
+  max-width: 39.5vw;
 }
 
 .hero__actions {
   display: flex;
-  gap: 16px;
+  gap: 1.2vw;
   flex-wrap: wrap;
 }
 
@@ -266,9 +268,9 @@ table {
   color: var(--color-bg-white);
   overflow: hidden;
   white-space: nowrap;
-  padding: 10px 0;
-  border-top: 1px solid var(--color-bg-white);
-  border-bottom: 1px solid var(--color-bg-white);
+  padding: 0.73vw 0; /* 10px / 13.66 */
+  border-top: 0.07vw solid var(--color-bg-white);
+  border-bottom: 0.07vw solid var(--color-bg-white);
   display: flex;
   align-items: center;
 }
@@ -286,29 +288,29 @@ table {
   display: flex;
   align-items: center;
   animation: marqueeScroll 25s linear infinite;
-  padding-left: 20px;
+  padding-left: 1.46vw;
 }
 
 .marquee__content span {
   font-family: var(--font-headings);
-  font-size: 1.375rem; /* 22px */
+  font-size: 1.6vw; /* 22px / 13.66 */
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.04vw;
 }
 
 .marquee__dot {
   display: inline-block;
-  width: 6px;
-  height: 6px;
+  width: 0.44vw; /* 6px / 13.66 */
+  height: 0.44vw;
   background-color: var(--color-bg-cream);
   border-radius: 50%;
-  margin: 0 35px;
+  margin: 0 2.5vw; /* 35px / 13.66 */
 }
 
 /* --- LECTURE SECTION (MIDSECTION 1) --- */
 .lecture-section {
-  padding: 80px 0 40px;
+  padding: 5.8vw 0 2.9vw; /* 80px 0 40px / 13.66 */
   background-color: var(--color-bg-white);
 }
 
@@ -316,12 +318,12 @@ table {
   display: grid;
   grid-template-columns: 60% 40%;
   align-items: center;
-  gap: 40px;
+  gap: 2.9vw; /* 40px / 13.66 */
 }
 
 .lecture-block__title {
   font-family: var(--font-headings);
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.6vw; /* 36px / 13.66 */
   line-height: 1.35;
   font-weight: 400;
   color: var(--color-text-dark);
@@ -335,21 +337,21 @@ table {
 
 .lecture-block__img {
   width: 100%;
-  max-width: 400px;
+  max-width: 29.2vw; /* 400px / 13.66 */
   border-radius: 50%;
   animation: floatVisual 8s ease-in-out infinite;
 }
 
 /* --- SESSION SECTION (MIDSECTION 2) --- */
 .session-section {
-  padding: 40px 0 80px;
+  padding: 2.9vw 0 5.8vw; /* 40px 0 80px / 13.66 */
   background-color: var(--color-bg-white);
 }
 
 .session-block {
   display: grid;
   grid-template-columns: 42% 58%;
-  gap: 50px;
+  gap: 3.6vw; /* 50px / 13.66 */
   align-items: center;
 }
 
@@ -359,7 +361,7 @@ table {
 
 .session-block__img {
   width: 100%;
-  max-width: 480px;
+  max-width: 35.1vw; /* 480px / 13.66 */
 }
 
 .session-block__content {
@@ -369,20 +371,20 @@ table {
 
 .session-block__title {
   font-family: var(--font-headings);
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.6vw; /* 36px / 13.66 */
   line-height: 1.35;
   font-weight: 400;
   color: var(--color-text-dark);
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 2.9vw; /* 40px / 13.66 */
 }
 
 .session-table-wrapper {
-  margin-bottom: 25px;
+  margin-bottom: 1.8vw; /* 25px / 13.66 */
 }
 
 .session-table tr {
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 0.07vw solid var(--color-border);
 }
 
 .session-table tr:first-child {
@@ -394,9 +396,9 @@ table {
 }
 
 .session-table td {
-  padding: 16px 0;
+  padding: 1.1vw 0; /* 16px / 13.66 */
   font-family: var(--font-body);
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.46vw; /* 20px / 13.66 */
   line-height: 1.2;
 }
 
@@ -404,7 +406,7 @@ table {
   color: var(--color-text-muted);
   width: 45%;
   font-weight: 400;
-  padding-right: 15px;
+  padding-right: 1.1vw;
 }
 
 .session-table__val {
@@ -414,20 +416,20 @@ table {
 
 .session-block__notice {
   font-family: var(--font-body);
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.3vw; /* 18px / 13.66 */
   color: #3057A2;
   font-weight: 400;
 }
 
 /* --- STAGES SECTION --- */
 .stages-section {
-  padding: 80px 0;
+  padding: 5.8vw 0; /* 80px / 13.66 */
   background-color: var(--color-bg-white);
 }
 
 .section-title {
   font-family: var(--font-headings);
-  font-size: 3.375rem; /* 54px */
+  font-size: 3.95vw; /* 54px / 13.66 */
   line-height: 1.2;
   font-weight: 400;
   color: var(--color-text-dark);
@@ -435,38 +437,38 @@ table {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 15px 30px;
+  gap: 1.1vw 2.2vw;
 }
 
 .section-title__sub {
   font-family: var(--font-body);
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.46vw; /* 20px / 13.66 */
   color: #3057A2;
   text-transform: none;
   font-weight: 400;
-  max-width: 280px;
+  max-width: 20.5vw; /* 280px / 13.66 */
   line-height: 1.2;
 }
 
 .stages-section__header {
-  margin-bottom: 54px;
+  margin-bottom: 3.95vw; /* 54px / 13.66 */
 }
 
 /* Desktop Stages Grid Layout */
 .stages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(110px, auto);
-  gap: 20px;
+  grid-auto-rows: minmax(8vw, auto); /* Relative grid sizing */
+  gap: 1.46vw; /* 20px / 13.66 */
   position: relative;
 }
 
 .stage-card {
   background-color: var(--color-bg-cream);
-  padding: 24px;
+  padding: 1.75vw; /* 24px / 13.66 */
   border-radius: var(--border-radius-sm);
   display: flex;
-  gap: 16px;
+  gap: 1.17vw;
   position: relative;
   transition: var(--transition-smooth);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40' fill='%23e6dbcf' fill-opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");
@@ -474,18 +476,18 @@ table {
 }
 
 .stage-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(49, 49, 49, 0.08);
+  transform: translateY(-0.29vw);
+  box-shadow: 0 0.73vw 1.8vw rgba(49, 49, 49, 0.08);
 }
 
 .stage-card__num {
   font-family: var(--font-body);
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.46vw; /* 20px / 13.66 */
   font-weight: 600;
   color: var(--color-text-dark);
   background-color: var(--color-bg-white);
-  min-width: 36px;
-  height: 36px;
+  min-width: 2.6vw; /* 36px / 13.66 */
+  height: 2.6vw;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -495,14 +497,14 @@ table {
 
 .stage-card__text {
   font-family: var(--font-body);
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.46vw; /* 20px / 13.66 */
   font-weight: 500;
   line-height: 1.2;
   color: var(--color-text-dark);
-  padding-top: 6px;
+  padding-top: 0.44vw;
 }
 
-/* Custom Spanning Rules for Grid to Match Figma */
+/* Custom Spanning Rules for Grid */
 .stages-grid .stage-card:nth-child(1) {
   grid-column: span 1;
 }
@@ -532,15 +534,15 @@ table {
 /* Card 7 spans 2 columns horizontally */
 .stages-grid .stage-card:nth-child(7) {
   grid-column: span 2;
-  padding-right: 280px; /* Leave space for airplane overlay */
+  padding-right: 20.5vw; /* 280px / 13.66 space for airplane overlay */
   overflow: hidden;
 }
 
 .stage-card__bg-illustration {
   position: absolute;
-  bottom: -20px;
-  right: -30px;
-  width: 320px;
+  bottom: -1.46vw; /* -20px / 13.66 */
+  right: -2.2vw; /* -30px / 13.66 */
+  width: 23.4vw; /* 320px / 13.66 */
   height: auto;
   pointer-events: none;
   z-index: 1;
@@ -559,7 +561,7 @@ table {
 
 /* --- PARTICIPANTS SECTION --- */
 .participants-section {
-  padding: 80px 0 100px;
+  padding: 5.8vw 0 7.3vw; /* 80px 0 100px / 13.66 */
   background-color: var(--color-bg-white);
 }
 
@@ -567,24 +569,24 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 4.4vw; /* 60px / 13.66 */
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.46vw;
 }
 
 .participants-controls {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 1vw; /* 14px / 13.66 */
 }
 
 .participants-controls--mobile {
-  display: none; /* Desktop header controls visible */
+  display: none;
 }
 
 .carousel-btn {
-  width: 44px;
-  height: 44px;
+  width: 3.2vw; /* 44px / 13.66 */
+  height: 3.2vw;
   border-radius: 50%;
   background-color: var(--color-text-dark);
   color: var(--color-bg-white);
@@ -597,8 +599,8 @@ table {
 }
 
 .carousel-btn svg {
-  width: 20px;
-  height: 20px;
+  width: 1.46vw; /* 20px / 13.66 */
+  height: 1.46vw;
 }
 
 .carousel-btn:hover:not(:disabled) {
@@ -614,10 +616,10 @@ table {
 
 .participants-counter {
   font-family: var(--font-body);
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.46vw; /* 20px / 13.66 */
   font-weight: 500;
   color: var(--color-text-dark);
-  min-width: 50px;
+  min-width: 3.66vw;
   text-align: center;
 }
 
@@ -638,9 +640,9 @@ table {
 }
 
 .participant-card {
-  flex: 0 0 33.333%; /* 3 cards on desktop */
+  flex: 0 0 33.333%;
   max-width: 33.333%;
-  padding: 0 20px;
+  padding: 0 1.46vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -649,17 +651,17 @@ table {
 }
 
 .participant-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.36vw);
 }
 
 .participant-card__avatar {
-  width: 244px;
-  height: 244px;
+  width: 17.8vw; /* 244px / 13.66 */
+  height: 17.8vw;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 28px;
+  margin-bottom: 2vw; /* 28px / 13.66 */
   background-color: #E6DBCF;
-  box-shadow: inset 0 0 0 1px rgba(49, 49, 49, 0.05);
+  box-shadow: inset 0 0 0 0.07vw rgba(49, 49, 49, 0.05);
 }
 
 .participant-card__img {
@@ -676,26 +678,26 @@ table {
 
 .participant-card__name {
   font-family: var(--font-accent);
-  font-size: 1.5rem; /* 24px */
+  font-size: 1.75vw; /* 24px / 13.66 */
   font-weight: 600;
   line-height: 1.2;
   color: var(--color-text-dark);
-  margin-bottom: 8px;
+  margin-bottom: 0.58vw;
 }
 
 .participant-card__role {
   font-family: var(--font-body);
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.46vw; /* 20px / 13.66 */
   font-weight: 400;
   color: var(--color-text-muted);
-  margin-bottom: 20px;
+  margin-bottom: 1.46vw;
   flex-grow: 1;
 }
 
 /* --- FOOTER --- */
 .footer {
   background-color: var(--color-bg-cream);
-  padding: 40px 0;
+  padding: 2.9vw 0; /* 40px / 13.66 */
 }
 
 .footer__container {
@@ -706,7 +708,7 @@ table {
 
 .footer__text {
   font-family: var(--font-body);
-  font-size: 1rem; /* 16px */
+  font-size: 1.17vw; /* 16px / 13.66 */
   font-weight: 400;
   line-height: 1.2;
   color: var(--color-text-dark);
@@ -714,15 +716,9 @@ table {
 }
 
 /* --- KEYFRAME ANIMATIONS --- */
-@keyframes floatHorse {
-  0% { transform: translate(10px, 30px); }
-  50% { transform: translate(10px, 15px); }
-  100% { transform: translate(10px, 30px); }
-}
-
 @keyframes floatVisual {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-0.73vw); }
   100% { transform: translateY(0); }
 }
 
@@ -733,57 +729,46 @@ table {
 
 
 /* ----------------------------------------------------
-   RESPONSIVE MEDIA QUERIES (Pixel Perfect Adaptivity)
+   RESPONSIVE MEDIA QUERIES (100% fluid mobile vw)
    ---------------------------------------------------- */
 
-@media (max-width: 1200px) {
-  .hero__title {
-    font-size: 3.25rem;
-  }
-  
-  .stage-card__bg-illustration {
-    width: 260px;
-    right: -10px;
-    bottom: -10px;
-  }
-}
-
 @media (max-width: 1024px) {
-  /* Container side paddings */
-  .container {
-    padding: 0 24px;
+  html {
+    font-size: 1.5vw;
   }
   
-  /* Hero */
   .hero {
-    min-height: 600px;
+    min-height: 55vw;
   }
   
-  .hero__title {
-    font-size: 2.75rem;
-  }
-  
-  /* Lecture & Session Blocks */
   .lecture-block {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 4vw;
     text-align: center;
   }
   
   .lecture-block__visual {
     justify-content: center;
-    order: -1; /* visual on top for tablet/mobile */
+    order: -1;
+  }
+  
+  .lecture-block__img {
+    max-width: 40vw;
   }
   
   .session-block {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 4vw;
     text-align: center;
   }
   
   .session-block__visual {
     display: flex;
     justify-content: center;
+  }
+  
+  .session-block__img {
+    max-width: 50vw;
   }
   
   /* Stages Grid Tablet */
@@ -798,36 +783,53 @@ table {
   
   .stages-grid .stage-card:nth-child(7) {
     grid-column: span 2;
-    padding-right: 200px;
+    padding-right: 25vw;
   }
   
   /* Participant Carousel Tablet */
   .participant-card {
-    flex: 0 0 50%; /* 2 cards */
+    flex: 0 0 50%;
     max-width: 50%;
+  }
+  
+  .participant-card__avatar {
+    width: 25vw;
+    height: 25vw;
   }
 }
 
 @media (max-width: 768px) {
+  /* Scale factors relative to 375px mobile viewport width */
+  html {
+    font-size: 4.2vw; /* ~16px at 375px mobile scale */
+  }
+
+  .container {
+    padding: 0 5.3vw; /* 20px / 3.75 */
+  }
+
   /* Buttons */
   .btn {
     width: 100%;
-    padding: 16px 20px;
+    padding: 4.2vw 5.3vw; /* 16px 20px / 3.75 */
+    font-size: 4.2vw;
+    border-radius: 15vw;
+    border-width: 0.5vw;
   }
   
   /* Header */
   .header {
-    padding: 18px 0;
+    padding: 4.8vw 0; /* 18px / 3.75 */
   }
   
   .logo__img {
-    height: 28px;
+    height: 7.4vw; /* 28px / 3.75 */
   }
   
   /* Hero Section */
   .hero {
-    padding-top: 100px;
-    padding-bottom: 290px; /* Space for the huge absolute background horse at bottom */
+    padding-top: 26.6vw; /* 100px / 3.75 */
+    padding-bottom: 77.3vw; /* 290px / 3.75 */
     min-height: auto;
     display: block;
   }
@@ -837,18 +839,24 @@ table {
   }
   
   .hero__title {
-    font-size: 2.25rem;
+    font-size: 9.6vw; /* 36px / 3.75 */
     line-height: 1.15;
+    margin-bottom: 6vw;
   }
   
   .hero__subtitle {
-    font-size: 1rem;
-    margin-bottom: 30px;
+    font-size: 4.2vw; /* 16px / 3.75 */
+    margin-bottom: 8vw; /* 30px / 3.75 */
+    max-width: 100%;
+  }
+
+  .hero__actions {
+    gap: 4vw;
   }
   
   .hero__bg-illustration {
-    width: 100%;
-    height: 380px;
+    width: 100vw;
+    height: 77.3vw; /* 290px / 3.75 */
     left: 50%;
     transform: translateX(-50%);
     bottom: 0;
@@ -860,66 +868,86 @@ table {
   
   .hero__bg-img {
     width: 100%;
-    max-width: 450px;
+    max-width: 90vw; /* 450px mobile constraint */
     height: auto;
     object-fit: contain;
     object-position: center bottom;
   }
   
   /* Running Line */
+  .marquee-wrapper {
+    padding: 2vw 0;
+    border-top-width: 0.27vw;
+    border-bottom-width: 0.27vw;
+  }
+
   .marquee__content span {
-    font-size: 1rem;
+    font-size: 4.2vw; /* 16px / 3.75 */
+    letter-spacing: 0.1vw;
   }
   
   .marquee__dot {
-    margin: 0 15px;
-    width: 4px;
-    height: 4px;
+    margin: 0 4vw; /* 15px / 3.75 */
+    width: 1vw; /* 4px / 3.75 */
+    height: 1vw;
   }
   
   /* Lecture & Session Section */
   .lecture-section {
-    padding: 60px 0 30px;
+    padding: 16vw 0 8vw; /* 60px 0 30px / 3.75 */
   }
   
   .lecture-block__title {
-    font-size: 1.75rem;
+    font-size: 7.4vw; /* 28px / 3.75 */
+  }
+
+  .lecture-block__img {
+    max-width: 70vw;
   }
   
   .session-section {
-    padding: 30px 0 60px;
+    padding: 8vw 0 16vw; /* 30px 0 60px / 3.75 */
   }
   
   .session-block__title {
-    font-size: 1.75rem;
-    margin-bottom: 30px;
+    font-size: 7.4vw;
+    margin-bottom: 8vw;
+  }
+
+  .session-block__img {
+    max-width: 90vw;
   }
   
   .session-table-wrapper {
-    margin-bottom: 20px;
-    overflow-x: auto;
+    margin-bottom: 5.3vw;
   }
   
   .session-table td {
     display: block;
     width: 100%;
-    padding: 12px 0;
+    padding: 3.2vw 0; /* 12px / 3.75 */
     text-align: left;
+    font-size: 4.2vw;
   }
   
   .session-table tr {
-    padding: 8px 0;
+    padding: 2vw 0;
     display: block;
+    border-bottom-width: 0.27vw;
   }
   
   .session-table__key {
     width: 100%;
     padding-right: 0;
-    padding-bottom: 4px;
+    padding-bottom: 1vw;
   }
   
   .session-table__val {
     width: 100%;
+  }
+
+  .session-block__notice {
+    font-size: 4.2vw;
   }
   
   /* Hide Desktop Grid Stages & Show Mobile Slider */
@@ -928,31 +956,25 @@ table {
   }
   
   .section-title {
-    font-size: 2.25rem;
+    font-size: 8.5vw; /* 32px / 3.75 */
     flex-direction: column;
-    gap: 12px;
+    gap: 3.2vw;
   }
   
   .section-title__sub {
+    font-size: 4.8vw; /* 18px / 3.75 */
     max-width: 100%;
   }
   
   /* Stages Mobile Carousel CSS */
   .stages-carousel-wrapper {
     display: block;
-    margin-top: 40px;
+    margin-top: 10.6vw; /* 40px / 3.75 */
   }
   
   .stages-carousel-viewport {
-    overflow: hidden;
     width: 100%;
     border-radius: var(--border-radius-sm);
-  }
-  
-  .stages-carousel-track {
-    display: flex;
-    transition: transform var(--transition-smooth);
-    will-change: transform;
   }
   
   .stages-slide {
@@ -960,39 +982,47 @@ table {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 5.3vw; /* 20px / 3.75 */
   }
   
   .stage-card--slide {
-    height: 140px;
+    height: 37.3vw; /* 140px / 3.75 */
     display: flex;
     align-items: flex-start;
+    padding: 5.3vw;
   }
   
   .height-full {
-    height: 300px;
+    height: 80vw; /* 300px / 3.75 */
   }
   
+  .stage-card__num {
+    font-size: 4.8vw;
+    min-width: 9.6vw;
+    height: 9.6vw;
+  }
+
   .stage-card__text {
-    font-size: 1.125rem;
+    font-size: 4.2vw;
+    padding-top: 1vw;
   }
   
   .stages-carousel-controls {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 24px;
-    margin-top: 28px;
+    gap: 6.4vw;
+    margin-top: 7.4vw;
   }
   
   .stages-carousel-dots {
     display: flex;
-    gap: 6px;
+    gap: 1.6vw;
   }
   
   .stages-dots .dot, .stages-carousel-dots .dot {
-    width: 10px;
-    height: 10px;
+    width: 2.6vw; /* 10px / 3.75 */
+    height: 2.6vw;
     border-radius: 50%;
     background-color: var(--color-border);
     transition: var(--transition-smooth);
@@ -1005,75 +1035,87 @@ table {
   
   /* Participants section */
   .participants-section {
-    padding: 60px 0;
+    padding: 16vw 0;
   }
   
   .participants-section__header {
     justify-content: center;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 10.6vw;
   }
   
   #participants-desktop-controls {
-    display: none; /* Hide top controls on mobile */
+    display: none;
   }
   
   .participants-controls--mobile {
-    display: flex; /* Show centered controls under cards */
+    display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 8vw; /* 30px / 3.75 */
+    gap: 4vw;
+  }
+
+  .carousel-btn {
+    width: 11.7vw; /* 44px / 3.75 */
+    height: 11.7vw;
+  }
+
+  .carousel-btn svg {
+    width: 5.3vw;
+    height: 5.3vw;
+  }
+
+  .participants-counter {
+    font-size: 4.8vw;
+    min-width: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .participant-card {
-    flex: 0 0 100%; /* 1 card on mobile */
+    flex: 0 0 100%;
     max-width: 100%;
+    padding: 0 5.3vw;
   }
   
   .participant-card__avatar {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
+    width: 53.3vw; /* 200px / 3.75 */
+    height: 53.3vw;
+    margin-bottom: 5.3vw;
   }
   
   .participant-card__name {
-    font-size: 1.35rem;
+    font-size: 5.8vw;
+    margin-bottom: 2vw;
   }
   
   .participant-card__role {
-    font-size: 1.125rem;
+    font-size: 4.8vw;
+    margin-bottom: 5.3vw;
+  }
+
+  .btn--outline-dark {
+    font-size: 3.7vw;
+    padding: 2vw 4vw;
   }
 }
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0 16px;
-  }
-  
-  .hero__title {
-    font-size: 2rem;
-  }
-  
-  .section-title {
-    font-size: 1.875rem;
-  }
-  
-  .stage-card {
-    padding: 16px;
-  }
-  
+  /* Additional sizing for extremely narrow screens */
   .stage-card--slide {
-    height: 180px;
+    height: 48vw; /* Give more height for text wrapping */
   }
   
   .height-full {
-    height: 380px;
+    height: 101vw;
   }
   
   .footer {
-    padding: 30px 0;
+    padding: 8vw 0;
   }
   
   .footer__text {
-    font-size: 0.875rem;
+    font-size: 3.7vw;
   }
 }
