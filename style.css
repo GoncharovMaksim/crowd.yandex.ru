@@ -463,8 +463,8 @@ table {
 
 .lecture-block__img {
   width: 100%;
-  max-width: 29.2vw; /* 400px / 13.66 */
-  border-radius: 50%;
+  max-width: 28.84vw; /* 394px / 13.66 */
+  height: auto;
   animation: floatVisual 8s ease-in-out infinite;
 }
 
