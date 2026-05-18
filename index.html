@@ -29,9 +29,22 @@
   <!-- HERO SECTION -->
   <section class="hero" id="hero">
     <div class="hero__bg-illustration">
-      <picture>
-        <source media="(max-width: 768px)" srcset="/public/images/hero-bg-mobile.png">
-        <img src="/public/images/hero-bg-desktop.png" alt="Vasuki Chess Club background illustration" class="hero__bg-img">
+      <!-- Desktop Collage Layers (1:1 with Figma layers) -->
+      <div class="hero__bg-desktop-only">
+        <img src="/public/images/hero-texture.png" alt="" class="hero__bg-layer hero__bg-layer--texture">
+        <div class="hero__bg-layer hero__bg-layer--ellipse"></div>
+        <img src="/public/images/hero-rays.svg" alt="" class="hero__bg-layer hero__bg-layer--rays">
+        <img src="/public/images/hero-path.svg" alt="" class="hero__bg-layer hero__bg-layer--path">
+        <img src="/public/images/hero-city.png" alt="" class="hero__bg-layer hero__bg-layer--city">
+        <img src="/public/images/hero-chess-1.png" alt="" class="hero__bg-layer hero__bg-layer--chess-1">
+        <img src="/public/images/hero-chess-2.png" alt="" class="hero__bg-layer hero__bg-layer--chess-2">
+        <img src="/public/images/hero-chess-3.png" alt="" class="hero__bg-layer hero__bg-layer--chess-3">
+        <img src="/public/images/hero-chess-small.png" alt="" class="hero__bg-layer hero__bg-layer--chess-small">
+      </div>
+      
+      <!-- Mobile Collage Image -->
+      <picture class="hero__bg-mobile-only">
+        <img src="/public/images/hero-bg-mobile.png" alt="Vasuki Chess Club background illustration" class="hero__bg-img">
       </picture>
     </div>
     
