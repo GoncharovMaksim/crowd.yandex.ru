@@ -78,7 +78,7 @@ table {
 
 .line-through {
   text-decoration: line-through;
-  color: var(--color-accent-red);
+  text-decoration-color: var(--color-accent-red);
 }
 
 /* --- Layout Container --- */
@@ -510,7 +510,7 @@ table {
 }
 
 .session-table tr {
-  border-bottom: 0.07vw solid var(--color-border);
+  border-bottom: 0.15vw solid var(--color-border);
 }
 
 .session-table tr:first-child {
@@ -522,7 +522,8 @@ table {
 }
 
 .session-table td {
-  padding: 1.1vw 0; /* 16px / 13.66 */
+  padding-top: 1.1vw;
+  padding-bottom: 1.1vw;
   font-family: var(--font-body);
   font-size: 1.46vw; /* 20px / 13.66 */
   line-height: 1.2;
@@ -533,11 +534,13 @@ table {
   width: 45%;
   font-weight: 400;
   padding-right: 1.1vw;
+  border-right: 0.15vw solid var(--color-border);
 }
 
 .session-table__val {
   color: var(--color-text-dark);
   font-weight: 600;
+  padding-left: 1.1vw;
 }
 
 .session-block__notice {
@@ -1077,10 +1080,12 @@ table {
     width: 100%;
     padding-right: 0;
     padding-bottom: 1vw;
+    border-right: none;
   }
   
   .session-table__val {
     width: 100%;
+    padding-left: 0;
   }
 
   .session-block__notice {
