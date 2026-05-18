@@ -322,12 +322,15 @@ table {
 }
 
 .hero__bg-layer--chess-small {
-  left: 90.69vw; /* 1238.83px / 13.66 (corrected to 1366px frame coordinate!) */
-  top: 40.86vw; /* 558.2px / 13.66 */
+  left: 111.04vw; /* 1516.83px / 13.66 (original horizontal alignment) */
+  top: 49.86vw; /* 681px / 13.66 (lowered slightly to sit perfectly on the perspective grid) */
   width: 6.05vw; /* 82.61px / 13.66 */
   height: 8.95vw; /* 122.22px / 13.66 */
   z-index: 6; /* In front of city and path */
 }
+
+
+
 
 
 .hero__container {
