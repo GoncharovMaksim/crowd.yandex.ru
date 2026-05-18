@@ -260,6 +260,7 @@ table {
   height: 64.5vw;
   mix-blend-mode: multiply;
   opacity: 0.08; /* Grit paper texture opacity */
+  z-index: 10; /* Apply texture on top of all illustration layers */
 }
 
 .hero__bg-layer--ellipse {
@@ -269,6 +270,7 @@ table {
   height: 48.32vw;
   background-color: var(--color-accent-gold);
   border-radius: 50%;
+  z-index: 1; /* Lowest layer of collage background */
 }
 
 .hero__bg-layer--rays {
@@ -276,6 +278,7 @@ table {
   top: 1.45vw; /* 19.76px / 13.66 */
   width: 56.84vw; /* 776.49px / 13.66 */
   height: 56.84vw;
+  z-index: 2; /* Sits on top of yellow ellipse, behind chess pieces */
 }
 
 .hero__bg-layer--path {
@@ -283,6 +286,7 @@ table {
   top: 27.89vw; /* 381px / 13.66 */
   width: 117.4vw; /* 1603.71px / 13.66 */
   height: 33.95vw; /* 463.82px / 13.66 */
+  z-index: 5; /* Chessboard perspective grid - sits on top of city, below front chess pieces */
 }
 
 .hero__bg-layer--city {
@@ -290,6 +294,7 @@ table {
   top: 28.7vw; /* 392px / 13.66 */
   width: 118.85vw; /* 1623.5px / 13.66 */
   height: 33.13vw; /* 452.5px / 13.66 */
+  z-index: 4; /* Behind knight, path, pawn; in front of king, queen, rays, ellipse */
 }
 
 .hero__bg-layer--chess-1 {
@@ -297,6 +302,7 @@ table {
   top: 21.03vw; /* 287.29px / 13.66 */
   width: 10.65vw; /* 145.51px / 13.66 */
   height: 19.41vw; /* 265.17px / 13.66 */
+  z-index: 3; /* Behind city */
 }
 
 .hero__bg-layer--chess-2 {
@@ -304,6 +310,7 @@ table {
   top: 28.72vw; /* 392.36px / 13.66 */
   width: 9.51vw; /* 129.9px / 13.66 */
   height: 19.42vw; /* 265.32px / 13.66 */
+  z-index: 3; /* Behind city */
 }
 
 .hero__bg-layer--chess-3 {
@@ -311,14 +318,17 @@ table {
   top: 44.26vw; /* 604.59px / 13.66 */
   width: 14.35vw; /* 196.08px / 13.66 */
   height: 19.63vw; /* 268.11px / 13.66 */
+  z-index: 6; /* In front of city and path */
 }
 
 .hero__bg-layer--chess-small {
-  left: 111.04vw; /* 1516.83px / 13.66 */
+  left: 90.69vw; /* 1238.83px / 13.66 (corrected to 1366px frame coordinate!) */
   top: 40.86vw; /* 558.2px / 13.66 */
   width: 6.05vw; /* 82.61px / 13.66 */
   height: 8.95vw; /* 122.22px / 13.66 */
+  z-index: 6; /* In front of city and path */
 }
+
 
 .hero__container {
   position: relative;
