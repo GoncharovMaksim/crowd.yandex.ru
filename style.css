@@ -677,7 +677,6 @@ table {
 .stages-grid .stage-card:nth-child(7) {
   grid-column: span 2;
   padding-right: 20.5vw; /* 280px / 13.66 space for airplane overlay */
-  overflow: hidden;
 }
 
 .stage-card__bg-illustration {
