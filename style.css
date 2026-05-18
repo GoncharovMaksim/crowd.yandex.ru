@@ -202,9 +202,8 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right -20vw bottom; /* Shift collage significantly to the right (20vw) to ensure it never overlaps the buttons */
+  object-position: right bottom; /* Aligns perfectly with the right bottom edge of the screen as designed */
   opacity: 0.95;
-  filter: sepia(0.45) saturate(1.35) brightness(0.96) contrast(0.98); /* Converts grey texture to warm yellowish/creamy vintage paper tint */
 }
 
 .hero__container {
@@ -870,7 +869,6 @@ table {
     height: 100%;
     object-fit: cover;
     object-position: center bottom;
-    filter: sepia(0.45) saturate(1.35) brightness(0.96) contrast(0.98); /* Warm yellow paper filter on mobile */
   }
   
   /* Running Line */
