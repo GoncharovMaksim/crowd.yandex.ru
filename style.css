@@ -603,17 +603,17 @@ table {
 }
 
 .stage-card {
-  background-color: var(--color-bg-cream);
+  background-color: #FAF8F5; /* Much lighter, bright cream paper background! */
   padding: 1.75vw; /* 24px / 13.66 */
   border-radius: var(--border-radius-sm);
   display: flex;
   gap: 1.17vw;
   position: relative;
   transition: var(--transition-smooth);
-  background-image: url("/images/paper-texture.png");
-  background-size: cover;
+  background-image: url("/images/paper-texture.png"); /* Use the first, correct paper texture sheet! */
+  background-size: cover; /* Safe cover scaling that preserves aspect ratio */
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; /* Centered slice crops out the top-left stamp completely! */
   background-blend-mode: multiply;
 }
 
