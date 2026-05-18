@@ -189,33 +189,140 @@ table {
   isolation: isolate; /* Ensures the blend-mode isolated stacking context renders perfectly on all screens */
 }
 
+@media (min-width: 769px) {
+  .hero {
+    min-height: 43.75rem;
+    height: 43.75rem;
+    padding-top: 8.125rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero__content {
+    max-width: 36.25rem;
+  }
+
+  .hero__title {
+    font-size: 3.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2.5rem;
+    max-width: 33.875rem;
+  }
+
+  .hero__actions {
+    max-width: 36.25rem;
+    gap: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .hero__actions .btn {
+    font-size: 1rem;
+    padding: 1.25rem;
+    border-width: 0.125rem;
+    border-radius: 4.125rem;
+  }
+}
+
 .hero__bg-illustration {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: -8.93vw; /* -122px / 13.66 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140.56vw; /* 1920px / 13.66 */
+  height: 64.5vw; /* 881px / 13.66 */
   pointer-events: none;
   z-index: 1;
 }
 
-.hero__bg-illustration picture {
-  display: block;
+.hero__bg-desktop-only {
+  position: relative;
   width: 100%;
   height: 100%;
+  display: block;
 }
 
-.hero__bg-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right bottom; /* Aligns perfectly with the right bottom edge of the screen as designed */
-  opacity: 0.95;
-  mix-blend-mode: multiply; /* Allows the warm cream #E9DED4 background of the banner to show through the image texture */
+.hero__bg-mobile-only {
+  display: none;
+}
+
+.hero__bg-layer {
+  position: absolute;
+  pointer-events: none;
+}
+
+.hero__bg-layer--texture {
+  left: 0;
+  top: 0;
+  width: 140.56vw;
+  height: 64.5vw;
+  mix-blend-mode: multiply;
+  opacity: 0.08; /* Grit paper texture opacity */
+}
+
+.hero__bg-layer--ellipse {
+  left: 69.62vw; /* 951px / 13.66 */
+  top: 5.71vw; /* 78px / 13.66 */
+  width: 48.32vw; /* 660px / 13.66 */
+  height: 48.32vw;
+  background-color: var(--color-accent-gold);
+  border-radius: 50%;
+}
+
+.hero__bg-layer--rays {
+  left: 65.36vw; /* 892.76px / 13.66 */
+  top: 1.45vw; /* 19.76px / 13.66 */
+  width: 56.84vw; /* 776.49px / 13.66 */
+  height: 56.84vw;
+}
+
+.hero__bg-layer--path {
+  left: 11.57vw; /* 158px / 13.66 */
+  top: 27.89vw; /* 381px / 13.66 */
+  width: 117.4vw; /* 1603.71px / 13.66 */
+  height: 33.95vw; /* 463.82px / 13.66 */
+}
+
+.hero__bg-layer--city {
+  left: 11.82vw; /* 161.5px / 13.66 */
+  top: 28.7vw; /* 392px / 13.66 */
+  width: 118.85vw; /* 1623.5px / 13.66 */
+  height: 33.13vw; /* 452.5px / 13.66 */
+}
+
+.hero__bg-layer--chess-1 {
+  left: 98.06vw; /* 1339.45px / 13.66 */
+  top: 21.03vw; /* 287.29px / 13.66 */
+  width: 10.65vw; /* 145.51px / 13.66 */
+  height: 19.41vw; /* 265.17px / 13.66 */
+}
+
+.hero__bg-layer--chess-2 {
+  left: 73.73vw; /* 1007.18px / 13.66 */
+  top: 28.72vw; /* 392.36px / 13.66 */
+  width: 9.51vw; /* 129.9px / 13.66 */
+  height: 19.42vw; /* 265.32px / 13.66 */
+}
+
+.hero__bg-layer--chess-3 {
+  left: 81.53vw; /* 1113.64px / 13.66 */
+  top: 44.26vw; /* 604.59px / 13.66 */
+  width: 14.35vw; /* 196.08px / 13.66 */
+  height: 19.63vw; /* 268.11px / 13.66 */
+}
+
+.hero__bg-layer--chess-small {
+  left: 111.04vw; /* 1516.83px / 13.66 */
+  top: 40.86vw; /* 558.2px / 13.66 */
+  width: 6.05vw; /* 82.61px / 13.66 */
+  height: 8.95vw; /* 122.22px / 13.66 */
 }
 
 .hero__container {
-  z-index: 2;
+  position: relative;
+  z-index: 2; /* Maintained stacking context, below background collage */
   width: 100%;
 }
 
@@ -871,7 +978,11 @@ table {
     z-index: 1;
   }
   
-  .hero__bg-illustration picture {
+  .hero__bg-desktop-only {
+    display: none;
+  }
+  
+  .hero__bg-mobile-only {
     display: block;
     width: 100%;
     height: 100%;
@@ -883,7 +994,7 @@ table {
     height: 100%;
     object-fit: cover;
     object-position: center bottom;
-    mix-blend-mode: multiply; /* Keep the warm paper blending on mobile */
+    opacity: 1;
   }
   
   /* Running Line */
