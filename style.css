@@ -786,9 +786,7 @@ table {
   transition: var(--transition-smooth);
 }
 
-.participant-card:hover {
-  transform: translateY(-0.36vw);
-}
+
 
 .participant-card__avatar {
   width: 17.8vw; /* 244px / 13.66 */
