@@ -509,8 +509,13 @@ table {
   margin-bottom: 1.8vw; /* 25px / 13.66 */
 }
 
+.session-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
 .session-table tr {
-  border-bottom: 0.15vw solid var(--color-border);
+  border-bottom: 2px solid var(--color-border); /* Thicker dividing lines! */
 }
 
 .session-table tr:first-child {
@@ -531,16 +536,16 @@ table {
 
 .session-table__key {
   color: var(--color-text-muted);
-  width: 45%;
+  width: 50%;
   font-weight: 400;
-  padding-right: 1.1vw;
-  border-right: 0.15vw solid var(--color-border);
+  padding-right: 1.5vw; /* Generous lateral padding from vertical line! */
+  border-right: 2px solid var(--color-border); /* Thicker dividing line! */
 }
 
 .session-table__val {
   color: var(--color-text-dark);
   font-weight: 600;
-  padding-left: 1.1vw;
+  padding-left: 1.5vw; /* Generous lateral padding from vertical line! */
 }
 
 .session-block__notice {
@@ -605,8 +610,11 @@ table {
   gap: 1.17vw;
   position: relative;
   transition: var(--transition-smooth);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='p' width='40' height='40' patternUnits='userSpaceOnUse'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40' fill='%23e6dbcf' fill-opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23p)'/%3E%3C/svg%3E");
+  background-image: url("/images/paper-texture.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
 }
 
 .stage-card:hover {
@@ -1078,7 +1086,7 @@ table {
   .session-table tr {
     padding: 2vw 0;
     display: block;
-    border-bottom-width: 0.27vw;
+    border-bottom: 2px solid var(--color-border); /* Thicker dividing lines on mobile! */
   }
   
   .session-table__key {
@@ -1163,6 +1171,14 @@ table {
   .stage-card__text {
     font-size: 4.2vw;
     padding-top: 1vw;
+  }
+
+  .stage-card__bg-illustration {
+    position: absolute;
+    bottom: -5vw;
+    right: -2vw;
+    width: 65vw;
+    transform: rotate(-1deg);
   }
   
   .stages-carousel-controls {
