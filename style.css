@@ -202,9 +202,9 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right -8vw bottom; /* Shift collage to the right to clear buttons space */
+  object-position: right -20vw bottom; /* Shift collage significantly to the right (20vw) to ensure it never overlaps the buttons */
   opacity: 0.95;
-  mix-blend-mode: multiply; /* Multiplies grey paper texture onto warm cream background */
+  filter: sepia(0.45) saturate(1.35) brightness(0.96) contrast(0.98); /* Converts grey texture to warm yellowish/creamy vintage paper tint */
 }
 
 .hero__container {
@@ -870,7 +870,7 @@ table {
     height: 100%;
     object-fit: cover;
     object-position: center bottom;
-    mix-blend-mode: multiply; /* Keep the warm paper blending on mobile */
+    filter: sepia(0.45) saturate(1.35) brightness(0.96) contrast(0.98); /* Warm yellow paper filter on mobile */
   }
   
   /* Running Line */
