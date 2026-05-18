@@ -191,20 +191,17 @@ table {
 .hero__bg-illustration {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 53vw;
+  left: 0;
+  width: 100%;
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
 }
 
 .hero__bg-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: right bottom;
   opacity: 0.95;
 }
@@ -855,22 +852,22 @@ table {
   }
   
   .hero__bg-illustration {
-    width: 100vw;
-    height: 77.3vw; /* 290px / 3.75 */
-    left: 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: none;
     bottom: 0;
-    top: auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    pointer-events: none;
+    z-index: 1;
   }
   
   .hero__bg-img {
     width: 100%;
-    max-width: 90vw; /* 450px mobile constraint */
-    height: auto;
-    object-fit: contain;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
     object-position: center bottom;
   }
   
