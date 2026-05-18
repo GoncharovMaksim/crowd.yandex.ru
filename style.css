@@ -274,10 +274,11 @@ table {
 }
 
 .hero__bg-layer--rays {
-  left: 71.78vw; /* Centered inside yellow ellipse: 93.78vw - 22vw */
-  top: 7.87vw; /* Centered inside yellow ellipse: 29.87vw - 22vw */
-  width: 44vw; /* Scaled down from 56.84vw to sit completely inside */
-  height: 44vw;
+  left: 70.53vw; /* Centered inside yellow ellipse: 93.78vw - 23.25vw */
+  top: 6.62vw; /* Centered inside yellow ellipse: 29.87vw - 23.25vw */
+  width: 46.5vw; /* Slightly larger to reduce the offset from the circle edges */
+  height: 46.5vw;
+  opacity: 0.4; /* Even more transparent for extremely soft, professional blending */
   z-index: 2; /* Sits on top of yellow ellipse, behind chess pieces */
 }
 
