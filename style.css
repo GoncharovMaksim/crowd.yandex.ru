@@ -274,10 +274,10 @@ table {
 }
 
 .hero__bg-layer--rays {
-  left: 65.36vw; /* 892.76px / 13.66 */
-  top: 1.45vw; /* 19.76px / 13.66 */
-  width: 56.84vw; /* 776.49px / 13.66 */
-  height: 56.84vw;
+  left: 71.78vw; /* Centered inside yellow ellipse: 93.78vw - 22vw */
+  top: 7.87vw; /* Centered inside yellow ellipse: 29.87vw - 22vw */
+  width: 44vw; /* Scaled down from 56.84vw to sit completely inside */
+  height: 44vw;
   z-index: 2; /* Sits on top of yellow ellipse, behind chess pieces */
 }
 
