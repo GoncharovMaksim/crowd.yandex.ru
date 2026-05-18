@@ -202,8 +202,9 @@ table {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right bottom;
+  object-position: right -8vw bottom; /* Shift collage to the right to clear buttons space */
   opacity: 0.95;
+  mix-blend-mode: multiply; /* Multiplies grey paper texture onto warm cream background */
 }
 
 .hero__container {
@@ -869,6 +870,7 @@ table {
     height: 100%;
     object-fit: cover;
     object-position: center bottom;
+    mix-blend-mode: multiply; /* Keep the warm paper blending on mobile */
   }
   
   /* Running Line */
