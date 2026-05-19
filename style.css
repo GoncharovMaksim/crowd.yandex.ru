@@ -972,15 +972,17 @@ table {
   }
   
   .logo__img {
-    height: 7.4vw; /* 28px / 3.75 */
+    height: 8.5vw; /* 32px / 3.75 - match mockup logo height */
   }
   
   /* Hero Section */
   .hero {
-    padding-top: 26.6vw; /* 100px / 3.75 */
-    padding-bottom: 77.3vw; /* 290px / 3.75 */
+    padding-top: 24vw; /* 90px / 3.75 - exactly match content y-start */
+    padding-bottom: 0;
+    height: 206.4vw; /* 774px / 3.75 - exact mockup height minus marquee height */
     min-height: auto;
     display: block;
+    overflow: visible; /* allows background collage to overflow for zero-gap marquee sitting on top */
   }
   
   .hero__content {
@@ -1000,7 +1002,25 @@ table {
   }
 
   .hero__actions {
-    gap: 4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3.73vw; /* 14px / 3.75 - spacing between buttons */
+    width: 100%;
+  }
+  
+  .hero__actions .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 4.25vw; /* 16px / 3.75 */
+    padding: 4.8vw 5.3vw; /* 18px 20px / 3.75 */
+  }
+  
+  .hero__actions .btn--outline {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    color: var(--color-btn-dark);
   }
   
   .hero__bg-illustration {
@@ -1035,11 +1055,28 @@ table {
     opacity: 1;
   }
   
+  .hero__bg-texture {
+    position: absolute;
+    left: 147.5vw; /* 150px - (-403px) = 553px / 3.75 */
+    top: 0;
+    width: 200vw; /* 750px / 3.75 */
+    height: 216.5vw; /* 812px / 3.75 */
+    mix-blend-mode: multiply;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 2; /* drawn on top of the collage hero-bg.png */
+  }
+  
   /* Running Line */
   .marquee-wrapper {
-    padding: 2vw 0;
+    height: 10.1vw; /* 38px / 3.75 */
+    display: flex;
+    align-items: center;
+    padding: 0;
     border-top-width: 0.27vw;
     border-bottom-width: 0.27vw;
+    position: relative;
+    z-index: 10; /* overlays the bottom 38px of the overflowing chessboard collage for perfect zero-gap alignment */
   }
 
   .marquee__content span {
