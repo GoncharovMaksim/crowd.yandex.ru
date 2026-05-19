@@ -360,6 +360,10 @@ table {
   display: block;
 }
 
+.mobile-br {
+  display: none;
+}
+
 .hero__title-line--left {
   text-align: left;
 }
@@ -994,6 +998,14 @@ table {
     line-height: 1.15;
     margin-bottom: 6vw;
   }
+
+  .mobile-br {
+    display: inline;
+  }
+
+  .hero__title-line {
+    white-space: nowrap;
+  }
   
   .hero__subtitle {
     font-size: 4.2vw; /* 16px / 3.75 */
@@ -1305,6 +1317,11 @@ table {
     height: 11.7vw;
   }
 
+  .carousel-btn:hover:not(:disabled) {
+    background-color: var(--color-text-dark);
+    color: var(--color-bg-white);
+  }
+
   .carousel-btn svg {
     width: 5.3vw;
     height: 5.3vw;
@@ -1344,6 +1361,19 @@ table {
     font-size: 3.7vw;
     padding: 2vw 4vw;
   }
+
+  .footer {
+    padding: 10.6vw 0 16vw 0; /* 40px top, 60px bottom padding for elegant safe viewport spacing */
+    background-color: var(--color-bg-cream);
+  }
+  
+  .footer__text {
+    font-size: 3.73vw; /* 14px / 3.75 - highly legible responsive size */
+    line-height: 1.4;
+    color: var(--color-text-dark);
+    opacity: 0.7;
+    text-align: left;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1357,10 +1387,10 @@ table {
   }
   
   .footer {
-    padding: 8vw 0;
+    padding: 12vw 0 20vw 0;
   }
   
   .footer__text {
-    font-size: 3.7vw;
+    font-size: 4.2vw; /* keep it at a highly readable ~13px scale even on small screens */
   }
 }
