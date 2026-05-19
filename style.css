@@ -896,17 +896,30 @@ table {
   
   .lecture-block {
     grid-template-columns: 1fr;
-    gap: 4vw;
+    grid-template-rows: auto auto auto;
+    gap: 6vw;
     text-align: center;
   }
   
+  .lecture-block__text-1 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
   .lecture-block__visual {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
     justify-content: center;
-    order: -1;
+  }
+  
+  .lecture-block__text-2 {
+    grid-column: 1;
+    grid-row: 3;
   }
   
   .lecture-block__img {
-    max-width: 40vw;
+    max-width: 60vw;
   }
   
   .session-block {
