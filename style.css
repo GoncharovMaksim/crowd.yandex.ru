@@ -1,12 +1,5 @@
-/* ----------------------------------------------------
-   VASUKI CHESS CLUB - FLUID SCALING STYLES (100% VW)
-   Fully responsive layout styled entirely in relative vw units
-   to achieve seamless, proportional scaling on any screen size.
-   ---------------------------------------------------- */
-
-/* --- CSS Variables / Fluid Design System --- */
 :root {
-  /* Colors */
+
   --color-bg-cream: #E9DED4;
   --color-bg-white: #FFFFFF;
   --color-text-dark: #313131;
@@ -19,19 +12,16 @@
   --color-btn-dark: #1F1F1F;
   --color-btn-dark-hover: #FBCE51;
 
-  /* Typography */
   --font-headings: 'Merriweather', serif;
   --font-body: 'Golos Text', sans-serif;
   --font-accent: 'Montserrat', sans-serif;
 
-  /* Relative Spacing & Layout Scaling (Base 1366px viewport) */
-  --max-width-container: 89.45vw; /* 1222px / 13.66 */
+  --max-width-container: 89.45vw;
   --transition-smooth: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  --border-radius-sm: 0.44vw; /* 6px / 13.66 */
-  --border-radius-lg: 0.88vw; /* 12px / 13.66 */
+  --border-radius-sm: 0.44vw;
+  --border-radius-lg: 0.88vw;
 }
 
-/* --- Global Resets & Base Styles --- */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -39,8 +29,8 @@
 }
 
 html {
-  /* Fluid base font size: scales dynamically with screen width */
-  font-size: 1.17vw; /* ~16px at 1366px */
+
+  font-size: 1.17vw;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -71,7 +61,6 @@ table {
   width: 100%;
 }
 
-/* --- Typography Utilities --- */
 .text-accent {
   color: var(--color-accent-red);
 }
@@ -81,25 +70,23 @@ table {
   text-decoration-color: var(--color-accent-red);
 }
 
-/* --- Layout Container --- */
 .container {
   max-width: var(--max-width-container);
   margin: 0 auto;
-  padding: 0 1.46vw; /* 20px / 13.66 */
+  padding: 0 1.46vw;
   position: relative;
 }
 
-/* --- Buttons --- */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 1.3vw 2vw; /* 18px 28px / 13.66 */
+  padding: 1.3vw 2vw;
   font-family: var(--font-body);
-  font-size: 1.17vw; /* 16px */
+  font-size: 1.17vw;
   font-weight: 500;
   line-height: 1.3;
-  border-radius: 5vw; /* Infinite border-radius relative to screen */
+  border-radius: 5vw;
   border: 0.15vw solid transparent;
   cursor: pointer;
   transition: var(--transition-smooth);
@@ -131,7 +118,7 @@ table {
   border-color: #3057A2;
   color: #3057A2;
   background-color: transparent;
-  font-size: 1vw; /* 14px / 13.66 */
+  font-size: 1vw;
   font-weight: 500;
   padding: 0.6vw 1.2vw;
 }
@@ -146,14 +133,13 @@ table {
   border-radius: 5vw;
 }
 
-/* --- HEADER --- */
 .header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 10;
-  padding: 1.9vw 0; /* 26px / 13.66 */
+  padding: 1.9vw 0;
 }
 
 .header__container {
@@ -168,7 +154,7 @@ table {
 }
 
 .logo__img {
-  height: 2.6vw; /* 36px / 13.66 */
+  height: 2.6vw;
   transition: var(--transition-smooth);
 }
 
@@ -176,17 +162,16 @@ table {
   transform: scale(1.03);
 }
 
-/* --- HERO SECTION --- */
 .hero {
   background-color: var(--color-bg-cream);
-  min-height: 51vw; /* 700px / 13.66 */
-  padding-top: 9.5vw; /* 130px / 13.66 */
-  padding-bottom: 5.8vw; /* 80px / 13.66 */
+  min-height: 51vw;
+  padding-top: 9.5vw;
+  padding-bottom: 5.8vw;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  isolation: isolate; /* Ensures the blend-mode isolated stacking context renders perfectly on all screens */
+  isolation: isolate;
 }
 
 @media (min-width: 769px) {
@@ -228,11 +213,11 @@ table {
 
 .hero__bg-illustration {
   position: absolute;
-  top: -8.93vw; /* -122px / 13.66 */
+  top: -8.93vw;
   left: 50%;
   transform: translateX(-50%);
-  width: 140.56vw; /* 1920px / 13.66 */
-  height: 64.5vw; /* 881px / 13.66 */
+  width: 140.56vw;
+  height: 64.5vw;
   pointer-events: none;
   z-index: 1;
 }
@@ -259,94 +244,90 @@ table {
   width: 140.56vw;
   height: 64.5vw;
   mix-blend-mode: multiply;
-  opacity: 0.35; /* Grit paper texture opacity increased for rich retro effect */
-  z-index: 10; /* Apply texture on top of all illustration layers */
+  opacity: 0.35;
+  z-index: 10;
 }
 
 .hero__bg-layer--ellipse {
-  left: 69.62vw; /* 951px / 13.66 */
-  top: 5.71vw; /* 78px / 13.66 */
-  width: 48.32vw; /* 660px / 13.66 */
+  left: 69.62vw;
+  top: 5.71vw;
+  width: 48.32vw;
   height: 48.32vw;
   background-color: var(--color-accent-gold);
   border-radius: 50%;
-  z-index: 1; /* Lowest layer of collage background */
+  z-index: 1;
 }
 
 .hero__bg-layer--rays {
-  left: 70.53vw; /* Centered inside yellow ellipse: 93.78vw - 23.25vw */
-  top: 6.62vw; /* Centered inside yellow ellipse: 29.87vw - 23.25vw */
-  width: 46.5vw; /* Slightly larger to reduce the offset from the circle edges */
+  left: 70.53vw;
+  top: 6.62vw;
+  width: 46.5vw;
   height: 46.5vw;
-  opacity: 0.4; /* Even more transparent for extremely soft, professional blending */
-  z-index: 2; /* Sits on top of yellow ellipse, behind chess pieces */
+  opacity: 0.4;
+  z-index: 2;
 }
 
 .hero__bg-layer--path {
-  left: 11.57vw; /* 158px / 13.66 */
-  top: 27.89vw; /* 381px / 13.66 */
-  width: 117.4vw; /* 1603.71px / 13.66 */
-  height: 33.95vw; /* 463.82px / 13.66 */
-  z-index: 5; /* Chessboard perspective grid - sits on top of city, below front chess pieces */
+  left: 11.57vw;
+  top: 27.89vw;
+  width: 117.4vw;
+  height: 33.95vw;
+  z-index: 5;
 }
 
 .hero__bg-layer--city {
-  left: 11.82vw; /* 161.5px / 13.66 */
-  top: 28.7vw; /* 392px / 13.66 */
-  width: 118.85vw; /* 1623.5px / 13.66 */
-  height: 33.13vw; /* 452.5px / 13.66 */
-  z-index: 4; /* Behind knight, path, pawn; in front of king, queen, rays, ellipse */
+  left: 11.82vw;
+  top: 28.7vw;
+  width: 118.85vw;
+  height: 33.13vw;
+  z-index: 4;
 }
 
 .hero__bg-layer--chess-1 {
-  left: 98.06vw; /* 1339.45px / 13.66 */
-  top: 21.03vw; /* 287.29px / 13.66 */
-  width: 10.65vw; /* 145.51px / 13.66 */
-  height: 19.41vw; /* 265.17px / 13.66 */
-  z-index: 3; /* Behind city */
+  left: 98.06vw;
+  top: 21.03vw;
+  width: 10.65vw;
+  height: 19.41vw;
+  z-index: 3;
 }
 
 .hero__bg-layer--chess-2 {
-  left: 73.73vw; /* 1007.18px / 13.66 */
-  top: 28.72vw; /* 392.36px / 13.66 */
-  width: 9.51vw; /* 129.9px / 13.66 */
-  height: 19.42vw; /* 265.32px / 13.66 */
-  z-index: 3; /* Behind city */
+  left: 73.73vw;
+  top: 28.72vw;
+  width: 9.51vw;
+  height: 19.42vw;
+  z-index: 3;
 }
 
 .hero__bg-layer--chess-3 {
-  left: 81.53vw; /* 1113.64px / 13.66 */
-  top: 44.26vw; /* 604.59px / 13.66 */
-  width: 14.35vw; /* 196.08px / 13.66 */
-  height: 19.63vw; /* 268.11px / 13.66 */
-  z-index: 6; /* In front of city and path */
+  left: 81.53vw;
+  top: 44.26vw;
+  width: 14.35vw;
+  height: 19.63vw;
+  z-index: 6;
 }
 
 .hero__bg-layer--chess-small {
-  left: 111.04vw; /* 1516.83px / 13.66 (original horizontal alignment) */
-  top: 49.86vw; /* 681px / 13.66 (lowered slightly to sit perfectly on the perspective grid) */
-  width: 6.05vw; /* 82.61px / 13.66 */
-  height: 8.95vw; /* 122.22px / 13.66 */
-  z-index: 6; /* In front of city and path */
+  left: 111.04vw;
+  top: 49.86vw;
+  width: 6.05vw;
+  height: 8.95vw;
+  z-index: 6;
 }
-
-
-
-
 
 .hero__container {
   position: relative;
-  z-index: 2; /* Maintained stacking context, below background collage */
+  z-index: 2;
   width: 100%;
 }
 
 .hero__content {
-  max-width: 42.5vw; /* 580px / 13.66 */
+  max-width: 42.5vw;
 }
 
 .hero__title {
   font-family: var(--font-headings);
-  font-size: 4.4vw; /* 60px / 13.66 */
+  font-size: 4.4vw;
   font-weight: 400;
   line-height: 1.1;
   text-transform: uppercase;
@@ -378,7 +359,7 @@ table {
 
 .hero__subtitle {
   font-family: var(--font-body);
-  font-size: 1.3vw; /* 18px / 13.66 */
+  font-size: 1.3vw;
   font-weight: 400;
   line-height: 1.35;
   color: var(--color-text-dark);
@@ -392,13 +373,12 @@ table {
   flex-wrap: wrap;
 }
 
-/* --- INFINITE MARQUEE --- */
 .marquee-wrapper {
   background-color: var(--color-accent-red);
   color: var(--color-bg-white);
   overflow: hidden;
   white-space: nowrap;
-  padding: 0.73vw 0; /* 10px / 13.66 */
+  padding: 0.73vw 0;
   border-top: 0.07vw solid var(--color-bg-white);
   border-bottom: 0.07vw solid var(--color-bg-white);
   display: flex;
@@ -423,7 +403,7 @@ table {
 
 .marquee__content span {
   font-family: var(--font-headings);
-  font-size: 1.6vw; /* 22px / 13.66 */
+  font-size: 1.6vw;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 0.04vw;
@@ -431,16 +411,15 @@ table {
 
 .marquee__dot {
   display: inline-block;
-  width: 0.44vw; /* 6px / 13.66 */
+  width: 0.44vw;
   height: 0.44vw;
   background-color: var(--color-bg-cream);
   border-radius: 50%;
-  margin: 0 2.5vw; /* 35px / 13.66 */
+  margin: 0 2.5vw;
 }
 
-/* --- LECTURE SECTION (MIDSECTION 1) --- */
 .lecture-section {
-  padding: 5.8vw 0 2.9vw; /* 80px 0 40px / 13.66 */
+  padding: 5.8vw 0 2.9vw;
   background-color: var(--color-bg-white);
 }
 
@@ -449,12 +428,12 @@ table {
   grid-template-columns: 60% 40%;
   grid-template-rows: auto auto;
   align-items: center;
-  gap: 1.5vw 2.9vw; /* 20px vertical, 40px horizontal / 13.66 */
+  gap: 1.5vw 2.9vw;
 }
 
 .lecture-block__title {
   font-family: var(--font-headings);
-  font-size: 2.6vw; /* 36px / 13.66 */
+  font-size: 2.6vw;
   line-height: 1.35;
   font-weight: 400;
   color: var(--color-text-dark);
@@ -480,21 +459,20 @@ table {
 
 .lecture-block__img {
   width: 100%;
-  max-width: 28.84vw; /* 394px / 13.66 */
+  max-width: 28.84vw;
   height: auto;
   animation: floatVisual 8s ease-in-out infinite;
 }
 
-/* --- SESSION SECTION (MIDSECTION 2) --- */
 .session-section {
-  padding: 2.9vw 0 5.8vw; /* 40px 0 80px / 13.66 */
+  padding: 2.9vw 0 5.8vw;
   background-color: var(--color-bg-white);
 }
 
 .session-block {
   display: grid;
   grid-template-columns: 42% 58%;
-  gap: 3.6vw; /* 50px / 13.66 */
+  gap: 3.6vw;
   align-items: center;
 }
 
@@ -504,7 +482,7 @@ table {
 
 .session-block__img {
   width: 100%;
-  max-width: 38.72vw; /* 529px / 13.66 */
+  max-width: 38.72vw;
 }
 
 .session-block__content {
@@ -514,16 +492,16 @@ table {
 
 .session-block__title {
   font-family: var(--font-headings);
-  font-size: 2.6vw; /* 36px / 13.66 */
+  font-size: 2.6vw;
   line-height: 1.35;
   font-weight: 400;
   color: var(--color-text-dark);
   text-transform: uppercase;
-  margin-bottom: 2.9vw; /* 40px / 13.66 */
+  margin-bottom: 2.9vw;
 }
 
 .session-table-wrapper {
-  margin-bottom: 1.8vw; /* 25px / 13.66 */
+  margin-bottom: 1.8vw;
 }
 
 .session-table {
@@ -532,7 +510,7 @@ table {
 }
 
 .session-table tr {
-  border-bottom: 2px solid var(--color-border); /* Thicker dividing lines! */
+  border-bottom: 2px solid var(--color-border);
 }
 
 .session-table tr:first-child {
@@ -547,7 +525,7 @@ table {
   padding-top: 1.1vw;
   padding-bottom: 1.1vw;
   font-family: var(--font-body);
-  font-size: 1.46vw; /* 20px / 13.66 */
+  font-size: 1.46vw;
   line-height: 1.2;
 }
 
@@ -555,32 +533,31 @@ table {
   color: var(--color-text-muted);
   width: 50%;
   font-weight: 400;
-  padding-right: 1.5vw; /* Generous lateral padding from vertical line! */
-  border-right: 2px solid var(--color-border); /* Thicker dividing line! */
+  padding-right: 1.5vw;
+  border-right: 2px solid var(--color-border);
 }
 
 .session-table__val {
   color: var(--color-text-dark);
   font-weight: 600;
-  padding-left: 1.5vw; /* Generous lateral padding from vertical line! */
+  padding-left: 1.5vw;
 }
 
 .session-block__notice {
   font-family: var(--font-body);
-  font-size: 1.3vw; /* 18px / 13.66 */
+  font-size: 1.3vw;
   color: #3057A2;
   font-weight: 400;
 }
 
-/* --- STAGES SECTION --- */
 .stages-section {
-  padding: 5.8vw 0; /* 80px / 13.66 */
+  padding: 5.8vw 0;
   background-color: var(--color-bg-white);
 }
 
 .section-title {
   font-family: var(--font-headings);
-  font-size: 3.95vw; /* 54px / 13.66 */
+  font-size: 3.95vw;
   line-height: 1.2;
   font-weight: 400;
   color: var(--color-text-dark);
@@ -589,60 +566,57 @@ table {
 
 .stages-section__header {
   position: relative;
-  margin-bottom: 3.95vw; /* 54px / 13.66 */
-  min-height: 7vw; /* Keep baseline box stable */
+  margin-bottom: 3.95vw;
+  min-height: 7vw;
 }
 
 .stages-section__header .section-title {
-  max-width: 59vw; /* 806px / 13.66 - forces wrap exactly after "Этапы преображения" */
+  max-width: 59vw;
 }
 
 .stages-section__header .section-title__sub {
   position: absolute;
-  left: 22.03vw; /* 301px / 13.66 horizontal offset matching Figma x: 373 vs x: 72 */
-  top: 5.27vw; /* 72px / 13.66 vertical offset to line 2 */
+  left: 22.03vw;
+  top: 5.27vw;
   font-family: var(--font-body);
-  font-size: 1.46vw; /* 20px / 13.66 */
+  font-size: 1.46vw;
   color: #3057A2;
   text-transform: none;
   font-weight: 400;
-  max-width: 20.5vw; /* 280px / 13.66 */
+  max-width: 20.5vw;
   line-height: 1.2;
 }
 
-/* Desktop Stages Grid Layout */
 .stages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(8vw, auto); /* Relative grid sizing */
-  gap: 1.46vw; /* 20px / 13.66 */
+  grid-auto-rows: minmax(8vw, auto);
+  gap: 1.46vw;
   position: relative;
 }
 
 .stage-card {
-  background-color: #FAF8F5; /* Much lighter, bright cream paper background! */
-  padding: 1.75vw; /* 24px / 13.66 */
+  background-color: #FAF8F5;
+  padding: 1.75vw;
   border-radius: var(--border-radius-sm);
   display: flex;
   gap: 1.17vw;
   position: relative;
   transition: var(--transition-smooth);
-  background-image: url("/images/paper-texture.png"); /* Use the first, correct paper texture sheet! */
-  background-size: cover; /* Safe cover scaling that preserves aspect ratio */
+  background-image: url("/images/paper-texture.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center; /* Centered slice crops out the top-left stamp completely! */
+  background-position: center;
   background-blend-mode: multiply;
 }
 
-
-
 .stage-card__num {
   font-family: var(--font-body);
-  font-size: 1.46vw; /* 20px / 13.66 */
+  font-size: 1.46vw;
   font-weight: 600;
   color: var(--color-text-dark);
   background-color: var(--color-bg-white);
-  min-width: 2.6vw; /* 36px / 13.66 */
+  min-width: 2.6vw;
   height: 2.6vw;
   border-radius: 50%;
   display: flex;
@@ -653,14 +627,13 @@ table {
 
 .stage-card__text {
   font-family: var(--font-body);
-  font-size: 1.46vw; /* 20px / 13.66 */
+  font-size: 1.46vw;
   font-weight: 500;
   line-height: 1.2;
   color: var(--color-text-dark);
   padding-top: 0.44vw;
 }
 
-/* Custom Spanning Rules for Grid */
 .stages-grid .stage-card:nth-child(1) {
   grid-column: span 1;
 }
@@ -669,7 +642,6 @@ table {
   grid-column: span 1;
 }
 
-/* Card 3 spans down 2 rows vertically */
 .stages-grid .stage-card:nth-child(3) {
   grid-column: span 1;
   grid-row: span 2;
@@ -687,17 +659,16 @@ table {
   grid-column: span 1;
 }
 
-/* Card 7 spans 2 columns horizontally */
 .stages-grid .stage-card:nth-child(7) {
   grid-column: span 2;
-  padding-right: 20.5vw; /* 280px / 13.66 space for airplane overlay */
+  padding-right: 20.5vw;
 }
 
 .stage-card__bg-illustration {
   position: absolute;
-  bottom: -1.46vw; /* -20px / 13.66 */
-  right: -2.2vw; /* -30px / 13.66 */
-  width: 23.4vw; /* 320px / 13.66 */
+  bottom: -1.46vw;
+  right: -2.2vw;
+  width: 23.4vw;
   height: auto;
   pointer-events: none;
   z-index: 1;
@@ -709,16 +680,12 @@ table {
   display: none;
 }
 
-
-
-/* Mobile Stage Carousel - Hidden on Desktop */
 .stages-carousel-wrapper {
   display: none;
 }
 
-/* --- PARTICIPANTS SECTION --- */
 .participants-section {
-  padding: 5.8vw 0 7.3vw; /* 80px 0 100px / 13.66 */
+  padding: 5.8vw 0 7.3vw;
   background-color: var(--color-bg-white);
 }
 
@@ -726,7 +693,7 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4.4vw; /* 60px / 13.66 */
+  margin-bottom: 4.4vw;
   flex-wrap: wrap;
   gap: 1.46vw;
 }
@@ -734,7 +701,7 @@ table {
 .participants-controls {
   display: flex;
   align-items: center;
-  gap: 1vw; /* 14px / 13.66 */
+  gap: 1vw;
 }
 
 .participants-controls--mobile {
@@ -742,7 +709,7 @@ table {
 }
 
 .carousel-btn {
-  width: 3.2vw; /* 44px / 13.66 */
+  width: 3.2vw;
   height: 3.2vw;
   border-radius: 50%;
   background-color: var(--color-text-dark);
@@ -756,15 +723,8 @@ table {
 }
 
 .carousel-btn svg {
-  width: 1.46vw; /* 20px / 13.66 */
+  width: 1.46vw;
   height: 1.46vw;
-}
-
-@media (hover: hover) {
-  .carousel-btn:hover:not(:disabled) {
-    background-color: var(--color-accent-gold);
-    color: var(--color-text-dark);
-  }
 }
 
 .carousel-btn:disabled {
@@ -775,14 +735,13 @@ table {
 
 .participants-counter {
   font-family: var(--font-body);
-  font-size: 1.46vw; /* 20px / 13.66 */
+  font-size: 1.46vw;
   font-weight: 500;
   color: var(--color-text-dark);
   min-width: 3.66vw;
   text-align: center;
 }
 
-/* Carousel Viewport & Track */
 .participants-carousel {
   width: 100%;
 }
@@ -809,14 +768,12 @@ table {
   transition: var(--transition-smooth);
 }
 
-
-
 .participant-card__avatar {
-  width: 17.8vw; /* 244px / 13.66 */
+  width: 17.8vw;
   height: 17.8vw;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 2vw; /* 28px / 13.66 */
+  margin-bottom: 2vw;
   background-color: #E6DBCF;
   box-shadow: inset 0 0 0 0.07vw rgba(49, 49, 49, 0.05);
 }
@@ -835,7 +792,7 @@ table {
 
 .participant-card__name {
   font-family: var(--font-accent);
-  font-size: 1.75vw; /* 24px / 13.66 */
+  font-size: 1.75vw;
   font-weight: 600;
   line-height: 1.2;
   color: var(--color-text-dark);
@@ -844,17 +801,16 @@ table {
 
 .participant-card__role {
   font-family: var(--font-body);
-  font-size: 1.46vw; /* 20px / 13.66 */
+  font-size: 1.46vw;
   font-weight: 400;
   color: var(--color-text-muted);
   margin-bottom: 1.46vw;
   flex-grow: 1;
 }
 
-/* --- FOOTER --- */
 .footer {
   background-color: var(--color-bg-cream);
-  padding: 2.9vw 0; /* 40px / 13.66 */
+  padding: 2.9vw 0;
 }
 
 .footer__container {
@@ -865,14 +821,13 @@ table {
 
 .footer__text {
   font-family: var(--font-body);
-  font-size: 1.17vw; /* 16px / 13.66 */
+  font-size: 1.17vw;
   font-weight: 400;
   line-height: 1.2;
   color: var(--color-text-dark);
   opacity: 0.7;
 }
 
-/* --- KEYFRAME ANIMATIONS --- */
 @keyframes floatVisual {
   0% { transform: translateY(0); }
   50% { transform: translateY(-0.73vw); }
@@ -884,12 +839,8 @@ table {
   100% { transform: translate3d(-100%, 0, 0); }
 }
 
+@media (max-width: 768px) {
 
-/* ----------------------------------------------------
-   RESPONSIVE MEDIA QUERIES (100% fluid mobile vw)
-   ---------------------------------------------------- */
-
-@media (max-width: 1024px) {
   html {
     font-size: 1.5vw;
   }
@@ -940,8 +891,7 @@ table {
   .session-block__img {
     max-width: 50vw;
   }
-  
-  /* Stages Grid Tablet */
+
   .stages-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -955,8 +905,7 @@ table {
     grid-column: span 2;
     padding-right: 25vw;
   }
-  
-  /* Participant Carousel Tablet */
+
   .participant-card {
     flex: 0 0 50%;
     max-width: 50%;
@@ -966,44 +915,38 @@ table {
     width: 25vw;
     height: 25vw;
   }
-}
 
-@media (max-width: 768px) {
-  /* Scale factors relative to 375px mobile viewport width */
   html {
-    font-size: 4.2vw; /* ~16px at 375px mobile scale */
+    font-size: 4.2vw;
   }
 
   .container {
-    padding: 0 5.3vw; /* 20px / 3.75 */
+    padding: 0 5.3vw;
   }
 
-  /* Buttons */
   .btn {
     width: 100%;
-    padding: 4.2vw 5.3vw; /* 16px 20px / 3.75 */
+    padding: 4.2vw 5.3vw;
     font-size: 4.2vw;
     border-radius: 15vw;
     border-width: 0.5vw;
   }
-  
-  /* Header */
+
   .header {
-    padding: 4.8vw 0; /* 18px / 3.75 */
+    padding: 4.8vw 0;
   }
   
   .logo__img {
-    height: 8.5vw; /* 32px / 3.75 - match mockup logo height */
+    height: 8.5vw;
   }
-  
-  /* Hero Section */
+
   .hero {
-    padding-top: 24vw; /* 90px / 3.75 - exactly match content y-start */
+    padding-top: 24vw;
     padding-bottom: 0;
-    height: 206.4vw; /* 774px / 3.75 - exact mockup height minus marquee height */
+    height: 206.4vw;
     min-height: auto;
     display: block;
-    overflow: visible; /* allows background collage to overflow for zero-gap marquee sitting on top */
+    overflow: visible;
   }
   
   .hero__content {
@@ -1011,7 +954,7 @@ table {
   }
   
   .hero__title {
-    font-size: 9.6vw; /* 36px / 3.75 */
+    font-size: 9.6vw;
     line-height: 1.15;
     margin-bottom: 6vw;
   }
@@ -1025,15 +968,15 @@ table {
   }
   
   .hero__subtitle {
-    font-size: 4.2vw; /* 16px / 3.75 */
-    margin-bottom: 8vw; /* 30px / 3.75 */
+    font-size: 4.2vw;
+    margin-bottom: 8vw;
     max-width: 100%;
   }
 
   .hero__actions {
     display: flex;
     flex-direction: column;
-    gap: 3.73vw; /* 14px / 3.75 - spacing between buttons */
+    gap: 3.73vw;
     width: 100%;
   }
   
@@ -1042,8 +985,8 @@ table {
     text-align: center;
     justify-content: center;
     box-sizing: border-box;
-    font-size: 4.25vw; /* 16px / 3.75 */
-    padding: 4.8vw 5.3vw; /* 18px 20px / 3.75 */
+    font-size: 4.25vw;
+    padding: 4.8vw 5.3vw;
   }
   
   .hero__actions .btn--outline {
@@ -1070,12 +1013,12 @@ table {
   
   .hero__bg-mobile-only {
     display: block;
-    width: 240vw; /* 900px / 3.75 */
-    height: 216.5vw; /* 812px / 3.75 */
+    width: 240vw;
+    height: 216.5vw;
     position: absolute;
-    left: -107.5vw; /* -403px / 3.75 */
+    left: -107.5vw;
     top: 0;
-    background-color: var(--color-bg-cream); /* Allows the child image to blend with the cream color in its stacking context */
+    background-color: var(--color-bg-cream);
   }
   
   .hero__bg-img {
@@ -1083,51 +1026,49 @@ table {
     height: 100%;
     object-fit: fill;
     opacity: 1;
-    mix-blend-mode: multiply; /* Blends the flattened grey paper collage into the warm cream background */
+    mix-blend-mode: multiply;
   }
   
   .hero__bg-texture {
     position: absolute;
-    left: 147.5vw; /* 150px - (-403px) = 553px / 3.75 */
+    left: 147.5vw;
     top: 0;
-    width: 200vw; /* 750px / 3.75 */
-    height: 216.5vw; /* 812px / 3.75 */
+    width: 200vw;
+    height: 216.5vw;
     mix-blend-mode: multiply;
     opacity: 0.35;
     pointer-events: none;
-    z-index: 2; /* drawn on top of the collage hero-bg.png */
+    z-index: 2;
   }
-  
-  /* Running Line */
+
   .marquee-wrapper {
-    height: 10.1vw; /* 38px / 3.75 */
+    height: 10.1vw;
     display: flex;
     align-items: center;
     padding: 0;
     border-top-width: 0.27vw;
     border-bottom-width: 0.27vw;
     position: relative;
-    z-index: 10; /* overlays the bottom 38px of the overflowing chessboard collage for perfect zero-gap alignment */
+    z-index: 10;
   }
 
   .marquee__content span {
-    font-size: 4.2vw; /* 16px / 3.75 */
+    font-size: 4.2vw;
     letter-spacing: 0.1vw;
   }
   
   .marquee__dot {
-    margin: 0 4vw; /* 15px / 3.75 */
-    width: 1vw; /* 4px / 3.75 */
+    margin: 0 4vw;
+    width: 1vw;
     height: 1vw;
   }
-  
-  /* Lecture & Session Section */
+
   .lecture-section {
-    padding: 16vw 0 8vw; /* 60px 0 30px / 3.75 */
+    padding: 16vw 0 8vw;
   }
   
   .lecture-block__title {
-    font-size: 7.4vw; /* 28px / 3.75 */
+    font-size: 7.4vw;
   }
 
   .lecture-block__img {
@@ -1135,7 +1076,7 @@ table {
   }
   
   .session-section {
-    padding: 8vw 0 16vw; /* 30px 0 60px / 3.75 */
+    padding: 8vw 0 16vw;
   }
   
   .session-block__title {
@@ -1154,7 +1095,7 @@ table {
   .session-table td {
     display: block;
     width: 100%;
-    padding: 3.2vw 0; /* 12px / 3.75 */
+    padding: 3.2vw 0;
     text-align: left;
     font-size: 4.2vw;
   }
@@ -1162,7 +1103,7 @@ table {
   .session-table tr {
     padding: 2vw 0;
     display: block;
-    border-bottom: 2px solid var(--color-border); /* Thicker dividing lines on mobile! */
+    border-bottom: 2px solid var(--color-border);
   }
   
   .session-table tr:nth-child(4) {
@@ -1199,20 +1140,19 @@ table {
   .session-block__notice {
     font-size: 4.2vw;
   }
-  
-  /* Hide Desktop Grid Stages & Show Mobile Slider */
+
   .stages-grid {
     display: none;
   }
   
   .section-title {
-    font-size: 8.5vw; /* 32px / 3.75 */
+    font-size: 8.5vw;
   }
 
   .stages-section__header {
     display: flex;
     flex-direction: column;
-    gap: 3.2vw; /* 12px / 3.75 */
+    gap: 3.2vw;
     margin-bottom: 7.5vw;
   }
 
@@ -1222,22 +1162,21 @@ table {
 
   .stages-section__header .section-title__sub {
     position: static;
-    font-size: 4.8vw; /* 18px / 3.75 */
+    font-size: 4.8vw;
     max-width: 100%;
     margin-top: 0;
   }
-  
-  /* Stages Mobile Carousel CSS */
+
   .stages-carousel-wrapper {
     display: block;
-    margin-top: 24vw; /* 40px / 3.75 */
-    position: relative; /* Position context for static airplane illustration overlay */
+    margin-top: 24vw;
+    position: relative;
   }
   
   .stages-carousel__airplane {
     display: block;
     position: absolute;
-    top: -18vw; /* floats elegantly overlapping the top margin and Slide 1 */
+    top: -18vw;
     right: -2vw;
     width: 65vw;
     height: auto;
@@ -1249,7 +1188,7 @@ table {
   .stages-carousel-viewport {
     width: 100%;
     border-radius: var(--border-radius-sm);
-    overflow: hidden; /* Hide cards outside the viewport */
+    overflow: hidden;
   }
 
   .stages-carousel-track {
@@ -1263,7 +1202,7 @@ table {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 7.4vw; /* space between rows */
+    gap: 7.4vw;
     background-color: #FAF8F5;
     background-image: url("/images/paper-texture.png");
     background-size: cover;
@@ -1272,7 +1211,7 @@ table {
     background-blend-mode: multiply;
     padding: 16vw 6.4vw 6.4vw;
     box-sizing: border-box;
-    min-height: 80vw; /* 300px / 3.75 unified height */
+    min-height: 80vw;
     border-radius: var(--border-radius-sm);
   }
   
@@ -1285,11 +1224,11 @@ table {
     height: auto !important;
     display: flex;
     align-items: flex-start;
-    gap: 4vw; /* distance from number to text */
+    gap: 4vw;
   }
   
   .stage-card--slide .stage-card__bg-illustration {
-    display: none !important; /* Hide duplicate sliding airplane on mobile */
+    display: none !important;
   }
   
   .stage-card__num {
@@ -1317,7 +1256,7 @@ table {
   }
   
   .stages-dots .dot, .stages-carousel-dots .dot {
-    width: 2.6vw; /* 10px / 3.75 */
+    width: 2.6vw;
     height: 2.6vw;
     border-radius: 50%;
     background-color: var(--color-border);
@@ -1328,8 +1267,7 @@ table {
   .stages-dots .dot.active, .stages-carousel-dots .dot.active {
     background-color: var(--color-text-dark);
   }
-  
-  /* Participants section */
+
   .participants-section {
     padding: 16vw 0;
   }
@@ -1347,12 +1285,12 @@ table {
   .participants-controls--mobile {
     display: flex;
     justify-content: center;
-    margin-top: 8vw; /* 30px / 3.75 */
+    margin-top: 8vw;
     gap: 4vw;
   }
 
   .carousel-btn {
-    width: 11.7vw; /* 44px / 3.75 */
+    width: 11.7vw;
     height: 11.7vw;
   }
 
@@ -1381,7 +1319,7 @@ table {
   }
   
   .participant-card__avatar {
-    width: 53.3vw; /* 200px / 3.75 */
+    width: 53.3vw;
     height: 53.3vw;
     margin-bottom: 5.3vw;
   }
@@ -1403,34 +1341,15 @@ table {
   }
 
   .footer {
-    padding: 10.6vw 0 16vw 0; /* 40px top, 60px bottom padding for elegant safe viewport spacing */
+    padding: 10.6vw 0 16vw 0;
     background-color: var(--color-bg-cream);
   }
   
   .footer__text {
-    font-size: 3.73vw; /* 14px / 3.75 - highly legible responsive size */
+    font-size: 3.73vw;
     line-height: 1.4;
     color: var(--color-text-dark);
     opacity: 0.7;
     text-align: left;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Additional sizing for extremely narrow screens */
-  .stage-card--slide {
-    height: 48vw; /* Give more height for text wrapping */
-  }
-  
-  .height-full {
-    height: 101vw;
-  }
-  
-  .footer {
-    padding: 12vw 0 20vw 0;
-  }
-  
-  .footer__text {
-    font-size: 4.2vw; /* keep it at a highly readable ~13px scale even on small screens */
   }
 }

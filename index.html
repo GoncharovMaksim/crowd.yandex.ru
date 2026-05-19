@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Клуб четырех коней — Васюки</title>
-  
-  <!-- SEO Meta Tags -->
+
   <meta name="description" content="Официальный сайт Международного Васюкинского турнира по шахматам с участием великих гроссмейстеров. Поддержите шахматную мысль!">
-  
-  <!-- Fonts Google -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +15,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="container header__container">
       <a href="#hero" class="logo" id="header-logo">
@@ -26,10 +23,9 @@
     </div>
   </header>
 
-  <!-- HERO SECTION -->
   <section class="hero" id="hero">
     <div class="hero__bg-illustration">
-      <!-- Desktop Collage Layers (1:1 with Figma layers) -->
+
       <div class="hero__bg-desktop-only">
         <img src="/images/hero-texture.png" alt="" class="hero__bg-layer hero__bg-layer--texture">
         <div class="hero__bg-layer hero__bg-layer--ellipse"></div>
@@ -41,8 +37,7 @@
         <img src="/images/hero-chess-3.png" alt="" class="hero__bg-layer hero__bg-layer--chess-3">
         <img src="/images/hero-chess-small.png" alt="" class="hero__bg-layer hero__bg-layer--chess-small">
       </div>
-      
-      <!-- Mobile Collage Image -->
+
       <div class="hero__bg-mobile-only">
         <img src="/images/hero-bg.png" alt="Vasuki Chess Club background illustration" class="hero__bg-img">
         <img src="/images/hero-texture.png" alt="" class="hero__bg-texture">
@@ -67,7 +62,6 @@
     </div>
   </section>
 
-  <!-- RUNNING LINE 1 -->
   <div class="marquee-wrapper">
     <div class="marquee">
       <div class="marquee__content">
@@ -78,7 +72,7 @@
         <span>Лед тронулся, господа присяжные заседатели!</span>
         <span class="marquee__dot"></span>
       </div>
-      <!-- Duplicate content to enable smooth infinite loop scroll without empty gap -->
+
       <div class="marquee__content" aria-hidden="true">
         <span>Дело помощи утопающим — дело рук самих утопающих!</span>
         <span class="marquee__dot"></span>
@@ -90,7 +84,6 @@
     </div>
   </div>
 
-  <!-- SUPPORT / LECTURE SECTION -->
   <section class="lecture-section" id="lecture-section">
     <div class="container">
       <div class="lecture-block">
@@ -111,7 +104,6 @@
     </div>
   </section>
 
-  <!-- SESSION SECTION -->
   <section class="session-section" id="session-section">
     <div class="container">
       <div class="session-block">
@@ -159,7 +151,6 @@
     </div>
   </section>
 
-  <!-- STAGES SECTION -->
   <section class="stages-section" id="stages">
     <div class="container">
       <div class="stages-section__header">
@@ -167,7 +158,6 @@
         <span class="section-title__sub">Будущие источники обогащения васюкинцев</span>
       </div>
 
-      <!-- Desktop Grid Layout -->
       <div class="stages-grid" id="stages-grid">
         <div class="stage-card">
           <span class="stage-card__num">1</span>
@@ -206,13 +196,11 @@
         </div>
       </div>
 
-      <!-- Mobile Carousel Slider (visible only on < 768px viewport) -->
       <div class="stages-carousel-wrapper" id="stages-carousel-wrapper">
         <img src="/images/airplane.png" alt="Airplane illustration" class="stages-carousel__airplane">
         <div class="stages-carousel-viewport">
           <div class="stages-carousel-track" id="stages-carousel-track">
-            
-            <!-- Slide 1: Stages 1 & 2 -->
+
             <div class="stages-slide">
               <div class="stage-card stage-card--slide">
                 <span class="stage-card__num">1</span>
@@ -224,7 +212,6 @@
               </div>
             </div>
 
-            <!-- Slide 2: Stage 3 -->
             <div class="stages-slide">
               <div class="stage-card stage-card--slide height-full">
                 <span class="stage-card__num">3</span>
@@ -232,7 +219,6 @@
               </div>
             </div>
 
-            <!-- Slide 3: Stages 4 & 5 -->
             <div class="stages-slide">
               <div class="stage-card stage-card--slide">
                 <span class="stage-card__num">4</span>
@@ -244,7 +230,6 @@
               </div>
             </div>
 
-            <!-- Slide 4: Stage 6 -->
             <div class="stages-slide">
               <div class="stage-card stage-card--slide height-full">
                 <span class="stage-card__num">6</span>
@@ -252,7 +237,6 @@
               </div>
             </div>
 
-            <!-- Slide 5: Stage 7 -->
             <div class="stages-slide">
               <div class="stage-card stage-card--slide height-full">
                 <span class="stage-card__num">7</span>
@@ -286,13 +270,11 @@
     </div>
   </section>
 
-  <!-- PARTICIPANTS SECTION -->
   <section class="participants-section" id="participants">
     <div class="container">
       <div class="participants-section__header">
         <h2 class="section-title">Участники турнира</h2>
-        
-        <!-- Desktop Controls (aligned in header) -->
+
         <div class="participants-controls" id="participants-desktop-controls">
           <button class="carousel-btn carousel-btn--prev" id="participants-prev" aria-label="Предыдущий участник">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg>
@@ -306,12 +288,10 @@
         </div>
       </div>
 
-      <!-- Looped Carousel -->
       <div class="participants-carousel">
         <div class="participants-carousel-viewport" id="participants-viewport">
           <div class="participants-carousel-track" id="participants-track">
-            
-            <!-- Card 1 -->
+
             <div class="participant-card">
               <div class="participant-card__avatar">
                 <img src="/images/capablanca.png" alt="Хозе-Рауль Капабланка" class="participant-card__img">
@@ -321,7 +301,6 @@
               <a href="#" class="btn btn--outline-dark btn--sm">Подробнее</a>
             </div>
 
-            <!-- Card 2 -->
             <div class="participant-card">
               <div class="participant-card__avatar">
                 <img src="/images/lasker.png" alt="Эммануил Ласкер" class="participant-card__img">
@@ -331,7 +310,6 @@
               <a href="#" class="btn btn--outline-dark btn--sm">Подробнее</a>
             </div>
 
-            <!-- Card 3 -->
             <div class="participant-card">
               <div class="participant-card__avatar">
                 <img src="/images/alekhine.png" alt="Александр Алехин" class="participant-card__img">
@@ -341,7 +319,6 @@
               <a href="#" class="btn btn--outline-dark btn--sm">Подробнее</a>
             </div>
 
-            <!-- Card 4 -->
             <div class="participant-card">
               <div class="participant-card__avatar">
                 <img src="/images/nimzowitsch.png" alt="Арон Нимцович" class="participant-card__img">
@@ -351,7 +328,6 @@
               <a href="#" class="btn btn--outline-dark btn--sm">Подробнее</a>
             </div>
 
-            <!-- Card 5 -->
             <div class="participant-card">
               <div class="participant-card__avatar">
                 <img src="/images/reti.png" alt="Рихард Рети" class="participant-card__img">
@@ -361,7 +337,6 @@
               <a href="#" class="btn btn--outline-dark btn--sm">Подробнее</a>
             </div>
 
-            <!-- Card 6 -->
             <div class="participant-card">
               <div class="participant-card__avatar">
                 <img src="/images/bender.png" alt="Остап Бендер" class="participant-card__img">
@@ -374,8 +349,7 @@
           </div>
         </div>
       </div>
-      
-      <!-- Mobile Controls (centered under the carousel) -->
+
       <div class="participants-controls participants-controls--mobile" id="participants-mobile-controls">
         <button class="carousel-btn carousel-btn--prev" id="participants-prev-mob" aria-label="Предыдущий участник">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 19l-7-7 7-7"/></svg>
@@ -391,7 +365,6 @@
     </div>
   </section>
 
-  <!-- RUNNING LINE 2 -->
   <div class="marquee-wrapper border-top-none">
     <div class="marquee">
       <div class="marquee__content">
@@ -413,7 +386,6 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer__container">
       <p class="footer__text">
