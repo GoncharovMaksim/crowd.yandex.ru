@@ -1228,14 +1228,14 @@ table {
   /* Stages Mobile Carousel CSS */
   .stages-carousel-wrapper {
     display: block;
-    margin-top: 10.6vw; /* 40px / 3.75 */
+    margin-top: 24vw; /* 40px / 3.75 */
     position: relative; /* Position context for static airplane illustration overlay */
   }
   
   .stages-carousel__airplane {
     display: block;
     position: absolute;
-    top: -24vw; /* floats elegantly overlapping the top margin and Slide 1 */
+    top: -18vw; /* floats elegantly overlapping the top margin and Slide 1 */
     right: -2vw;
     width: 65vw;
     height: auto;
@@ -1268,7 +1268,7 @@ table {
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: multiply;
-    padding: 6.4vw;
+    padding: 16vw 6.4vw 6.4vw;
     box-sizing: border-box;
     min-height: 80vw; /* 300px / 3.75 unified height */
     border-radius: var(--border-radius-sm);
