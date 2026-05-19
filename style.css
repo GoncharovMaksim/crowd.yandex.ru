@@ -1075,6 +1075,7 @@ table {
     position: absolute;
     left: -107.5vw; /* -403px / 3.75 */
     top: 0;
+    background-color: var(--color-bg-cream); /* Allows the child image to blend with the cream color in its stacking context */
   }
   
   .hero__bg-img {
@@ -1082,6 +1083,7 @@ table {
     height: 100%;
     object-fit: fill;
     opacity: 1;
+    mix-blend-mode: multiply; /* Blends the flattened grey paper collage into the warm cream background */
   }
   
   .hero__bg-texture {
